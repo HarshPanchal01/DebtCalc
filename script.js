@@ -1,29 +1,41 @@
-function calculate() {
-    console.log("Calculating...");
-    var loanAmount = document.getElementById("loan-amount").value;
-    console.log("loanAmount: ", loanAmount);
-    var interestRate = document.getElementById("interest-rate").value;
-    console.log("interestRate: ", interestRate);
-    var loanTerm = document.getElementById("loan-term").value;
-    console.log("loanTerm: ", loanTerm);
+// Listen for submit
 
-    if(loanAmount == "" || interestRate == "" || loanTerm == "") {
-        document.getElementById("output").innerHTML = "Please enter valid values for loan amount, interest rate, and loan term";
-        return;
-    }
+document.getElementById("loan-form").addEventListener("submit", computeResults);
 
-    if(isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm)) {
-        document.getElementById("output").innerHTML = "Please enter valid values for loan amount, interest rate, and loan term";
-        return;
-    }
-    var monthlyInterestRate = (interestRate / 100) / 12;
-    var monthlyPayment = loanAmount * monthlyInterestRate / (1 - Math.pow(1 + monthlyInterestRate, -loanTerm * 12));
-    var totalInterest = (monthlyPayment * loanTerm * 12) - loanAmount;
-    var totalAmount = totalInterest + loanAmount;
-    if (isNaN(monthlyPayment) || monthlyPayment === Infinity) {
-              document.getElementById("output").innerHTML = "Please enter valid values for loan amount, interest rate, and loan term";
-    } else {
-      document.getElementById("output").innerHTML = "Monthly Payment: $" + monthlyPayment.toFixed(2) + "<br>" + "Total Interest: $" + totalInterest.toFixed(2) + "<br>" + "Total Amount: $" + totalAmount.toFixed(2);
-    }
+function computeResults(e) {
+  // UI
+
+  const UIamount = document.getElementById("amount").value;
+  const UIinterest = document.getElementById("interest").value;
+  const UIyears = document.getElementById("years").value;
+
+  // Calculate
+
+  const principal = parseFloat(UIamount);
+  const CalculateInterest = parseFloat(UIinterest) / 100 / 12;
+  const calculatedPayments = parseFloat(UIyears) * 12;
+
+  //Compute monthly Payment
+
+  const x = Math.pow(1 + CalculateInterest, calculatedPayments);
+  const monthly = (principal * x * CalculateInterest) / (x - 1);
+  const monthlyPayment = monthly.toFixed(2);
+
+  //Compute Interest
+
+  const totalInterest = (monthly * calculatedPayments - principal).toFixed(2);
+
+  //Compute Total Payment
+
+  const totalPayment = (monthly * calculatedPayments).toFixed(2);
+
+  //Show results
+
+  document.getElementById("monthlyPayment").innerHTML = "$" + monthlyPayment;
+
+  document.getElementById("totalInterest").innerHTML = "%" + totalInterest;
+
+  document.getElementById("totalPayment").innerHTML = "$" + totalPayment;
+
+  e.preventDefault();
 }
-     
