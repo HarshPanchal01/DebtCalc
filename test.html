@@ -16,11 +16,27 @@
   <br>
   <div id="output"></div>
   <script>
+
+    $.ajax({
+        method: 'GET',
+        url: 'https://api.api-ninjas.com/v1/interestrate',
+        headers: { 'X-Api-Key': 'YOUR_API_KEY'},
+        contentType: 'application/json',
+        success: function(result) {
+            console.log(result);
+            document.getElementById("output").innerHTML = result;
+        },
+        error: function ajaxError(jqXHR) {
+            console.error('Error: ', jqXHR.responseText);
+        }
+    });
+
     function displayData() {
       var name = document.getElementById("name").value;
       var age = document.getElementById("age").value;
       document.getElementById("output").innerHTML = "Name: " + name + "<br>Age: " + age;
     }
   </script>
+  
 </body>
 </html>
