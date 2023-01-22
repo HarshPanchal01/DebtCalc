@@ -16,7 +16,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: white;
+  background: linear-gradient(rgba(0, 0, 255, 0.327), rgba(255, 255, 0, 0.344));
 }
 
 /* Setting wrapper styles */
