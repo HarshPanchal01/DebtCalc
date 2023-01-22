@@ -1,5 +1,4 @@
 import requests
-import json
 
 
 def find_canada(countries):
@@ -19,7 +18,7 @@ def mortgage(debt):
         canada=float(canada)
         canada=(canada/100)
         
-        debt_over_time=[debt*(canada+1),debt*(canada*3+1),debt*(canada*5+1),debt*(canada*10+1)]
+        debt_over_time=debt*(canada+1)
 
         return debt_over_time
 
