@@ -21,14 +21,10 @@ body{
 
 /* Setting wrapper styles */
 .wrapper{
-  width: 100%;
-  border-radius: 30px;
-  max-width: 420px;
-  margin: 1em;
-  padding: 2em;
-  color: white;
-  background: rgba(0,0,0,.80);
+  width: 600px;
+  background: #fff;
   padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 /* Setting the styles for the input fields*/
@@ -38,18 +34,6 @@ body{
   position: relative;
 }
 
-button {
-    margin: 0.5em;
-    border-radius: 50%;
-    border: none;
-    height: 44px;
-    width: 44px;
-    outline: none;
-    background: #7c7c7c2b;
-    color: white;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-}
 /* Setting the styles for the input fields*/
 .wrapper .input-data input{
   height: 100%;
@@ -83,6 +67,28 @@ button {
   height: 2px;
   width: 100%;
   bottom: 0;
+}
+
+/* Setting the styles for the underline*/
+.input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #4158d0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.wrapper .input-data{
+  margin-bottom: 20px;
+}
+
+/* Setting the styles for the underline*/
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{
+  transform: scaleX(1);
 }
 
 /* Setting the styles for the underline*/
