@@ -20,15 +20,28 @@
          <div class="input-data">
             <input type="text" id="loan-term" name="loan-term" required>
             <div class="underline"></div>
-            <label for="loan-term">Remaining balance on the mortgage:</label>
+            <label for="loan-term">Remaining balance on the house mortgage:</label>
          </div>
          <div class="input-data">
+            <input type="text" id="car-insurance" name="car loan and car-insurance" required>
             <div class="underline"></div>
-            <label for="third-question">Remaining balance on credit loans:</label>
+            <label for="car-insurance">Monthly payments for car loan and insurance:</label>
          </div>
          <div class="input-data">
+            <input type="text" id="education-debt" name="education-debt" required>
             <div class="underline"></div>
-            <label for="forth-question">Monthly expenses (car payments, living expenses, entertainment):</label>
+            <label for="education-debt">Remaining balance on education debt:</label>
+         </div>
+         
+         <div class="input-data">
+            <input type="text" id="credit-loan" name="credit-loan" required>
+            <div class="underline"></div>
+            <label for="credit-loan">Remaining balance on credit loans:</label>
+         </div>
+         <div class="input-data">
+            <input type="text" id="expenses" name="expenses" required>
+            <div class="underline"></div>
+            <label for="expenses">Monthly expenses (living expenses, entertainment):</label>
          </div>
          <input type="button" value="Calculate" onclick="calculate()">
          <div id="output"></div>
