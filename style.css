@@ -24,6 +24,7 @@ body{
   width: 600px;
   background: rgba(0, 0, 0, 0.8);
   padding: 30px;
+  border-radius: 30px;
 }
 
 /* Setting the styles for the input fields*/
@@ -39,8 +40,8 @@ body{
   width: 100%;
   border: none;
   font-size: 17px;
-  border-bottom: 2px solid silver;
   background: #7c7c7c2b;
+  border-radius: 30px;
 }
 
 /* Setting the styles for the label*/
@@ -56,7 +57,7 @@ body{
   position: absolute;
   bottom: 10px;
   left: 0;
-  color: grey;
+  color: white;
   pointer-events: none;
   transition: all 0.3s ease;
 }
@@ -124,6 +125,8 @@ body{
     color: white;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    justify-content: center;
+    align-items: center;
 }
 
 .abc:hover {
