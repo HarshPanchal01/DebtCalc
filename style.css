@@ -27,8 +27,7 @@ body{
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
-/* Setting the styles for the input
-/* Setting the styles for the input fields*/
+/* Setting the styles for the input*/
 .wrapper .input-data{
   height: 40px;
   width: 100%;
@@ -99,25 +98,6 @@ body{
   color: #000;
 }
 
-.animated-word {
-  display: inline-block;
-  animation: animateWord 3s infinite;
-}
-
-@keyframes animateWord {
-0% {
-content: "Cost";
-}
-60% {
-content: "Savings";
-}
-70% {
-content: "Expense";
-}
-90% {
-content: "Price";
-}
-}
 
 .title {
   text-align: center;
@@ -130,4 +110,18 @@ content: "Price";
   font-size: 2em;
   }
 
-
+  .title:before {
+    content: "True Cost";
+    animation: change-word 12s linear infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes change-word {
+    0% {content: "Learn how to save money";}
+    25% {content: "Financial Buddy";}
+    50% {content: "Be responsible with your earnings";}
+    100% {content: "Be prepared";}
+  
+  }
+  
