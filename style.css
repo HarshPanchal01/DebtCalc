@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 body{
     margin: 0;
     padding: 0;
@@ -117,6 +118,78 @@ input[type="sumbit"]:hover{
 
 .signup_link a:hover{
     text-decoration: underline;
+=======
+/* Importing the font from Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* Setting default styles for all elements */
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Setting background and aligning items in the body */
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 255, 0.327), rgba(255, 255, 0, 0.344));
+}
+
+/* Setting wrapper styles */
+.wrapper{
+  width: 600px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+/* Setting the styles for the input fields*/
+.wrapper .input-data{
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+
+/* Setting the styles for the input fields*/
+.wrapper .input-data input{
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  background: #7c7c7c2b;
+  border-radius: 30px;
+}
+
+/* Setting the styles for the label*/
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #4158d0;
+}
+
+/* Setting the styles for the label*/
+.wrapper .input-data label{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: white;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Setting the styles for the underline*/
+.input-data .underline{
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+>>>>>>> 6a54df6d66b8bd8a341d063bed8f88c7402776a8
 }
 <<<<<<< HEAD
 =======
@@ -167,49 +240,68 @@ nav li a:hover {
 >>>>>>> james
 =======
 
-.card {
-    background: rgba(0, 0, 0, 0.80);
-    color: white;
-    padding: 2em;
-    border-radius: 30px;
-    width: 100%;
-    max-width: 420px;
-    margin: 1em;
+/* Setting the styles for the underline*/
+.input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #4158d0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
 }
 
-.search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.wrapper .input-data{
+  margin-bottom: 20px;
 }
 
-button {
+/* Setting the styles for the underline*/
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{
+  transform: scaleX(1);
+}
+
+/* Setting the styles for the underline*/
+.input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #4158d0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.wrapper .input-data{
+  margin-bottom: 20px;
+}
+
+/* Setting the styles for the underline*/
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{
+  transform: scaleX(1);
+}
+
+.abc {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
-    height: 44px;
-    width: 44px;
+    height: 80px;
+    width: 80px;
     outline: none;
     background: #7c7c7c2b;
     color: white;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    justify-content: center;
+    align-items: center;
 }
 
-input.search-bar {
-    border: none;
-    outline: none;
-    padding: 0.4em 1em;
-    border-radius: 24px;
-    background: #7c7c7c2b;
-    color: white;
-    font-family: inherit;
-    font-size: 105%;
-    width: calc(100% - 100px);
-}
-
-button:hover {
+.abc:hover {
     background: #7c7c7c6b;
+<<<<<<< HEAD
 }
 
 .flex {
@@ -217,3 +309,6 @@ button:hover {
     align-items: center;
 }   
 >>>>>>> main
+=======
+}
+>>>>>>> 6a54df6d66b8bd8a341d063bed8f88c7402776a8
